@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="website.css">
+     <link rel="icon" href="data:image/png;base64,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">
+
+    <title>Epic Store</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-light bg-dark "id="homesec">
+            <div class="container">
+                
+              <span class="navbar-header">GAmes <span class="name">Store</span></span>
+              <ul class="nav">
+                <li class="nav-item ">
+                  <a class="nav-link active text-light" aria-current="page" href="#homesec">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-light" aria-current="page" href="#aboutsec">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-light" aria-current="page" href="#consolesec">Console</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-light" aria-current="page" href="#pc components">Pc components</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-light" aria-current="page" href="#contactus">Contact us</a>
+                </li>
+               
+
+                <button class="shadow__btn" href="bootstrapform.html">
+                    Login
+                </button>
+
+                       
+
+                           <!--carousel section-->
+             
+            </div>
+          </nav>
+
+        <div class="container-fluid">
+        <div class="panel bg-">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://preview.redd.it/jd5kga5lwd131.jpg?width=1080&crop=smart&auto=webp&s=7289119e20f3cd68e95f62359af95c8c3ce286b1" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        
+                      <h5 class="my-2 bg-dark">Shooting games</h5>
+                      
+                    </div>
+                  </div>
+                  <div class="carousel-item 2">
+                    <img src="https://cdn2.steamgriddb.com/hero/2050e03ca119580f74cca14cc6e97462.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Racing Games</h5>
+                     
+                    </div>
+                  </div>
+                  <div class="carousel-item 3">
+                    <img src="https://cdn2.steamgriddb.com/hero_thumb/0337b072bf67d2d155103851a4f90466.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Action Games</h5>
+                   
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>   
+        </div>
+    </div>
+                           <!--about section-->
+
+        <div class="container">
+          <div class="container bg-dark" id="aboutsec">
+                <div class="row ">
+                    <div class="col-6">
+                        <img src ="data:image/jpeg;base64,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" class="img-responsive img-circle margin" style="float:leftmargin-top: 100px;" alt="" width="400" height="300">
+                    </div>
+
+                    <div class="col-6 ">
+                        <div class="my-4">
+                            <h3>Best Console And PC components </h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius error at quisquam saepe, nihil asperiores impedit est voluptates maxime molestiae ipsa excepturi autem rem omnis reiciendis molestias dolor dolorem veritatis! Nemo illum, suscipit, amet maxime molestias officiis voluptatem facere sed sequi, ducimus porro omnis dolor quod. Accusantium quis expedita nihil!</p>
+                            <buttton type="button"class="shadow__btn my-4">ReadMore</buttton>
+                        </div>
+                    </div>
+
+                </div>
+
+              </div>
+            </div>
+              
+            
+
+                                          <!--future-->
+ 
+
+           <section class="Features" id="featuresec">
+
+        <div class="container py-5">
+            <div class="row py-5">
+              <div class="col-lg-5 m-auto text-center">
+                <h1 class="text-warning">Our Features 🎮</h1>
+                <p class="text-dark"style="font-weight:500">We have gaming Accssories And Console and playstation Games.</p>
+              </div>
+            </div>
+                 
+
+                                <!--card-->
+
+                              <Center>
+                                <h1 class="mini">Our Product</h1></Center>
+
+                              <section class="product" id="pc components">
+            <div class="container  py-5">
+              <div class="row py-5">
+                <div class="col m-auto text-start">
+                 
+                  <p>Lorm ipsum dolor sit amet consectetur adipisicing elit. Magni atque ut, nulla quos nam perferendis repudiandae, assumenda rerum</p>
+                </div>
+                  <div class="col text-end">
+                  <div class="btn-group justify-content-end">
+                    <a href="#one"  class="btn btn-success active" aria-current="page">Joystick</a>
+                    <a href="#two" class="btn btn-outline-success ">console</a>
+                    <a href="#" class="btn btn-outline-success ">mouse</a>
+                  </div>
+                  </div>
+                  <div class="row ">
+                    <div class="col-lg-3 text-center">
+                    <div class="card border-0 bg-light">
+                      <div class="card-body" id="one">
+                           <img src="https://relay-bl-in-records.sgp1.cdn.digitaloceanspaces.com/GameNation/EA_1086" class="img-fluid"style="height: 250px; width:250px ;" alt="...">
+                      </div>
+                      <h6>Sony Playstation 5 Official Dual Sense Controller White</h6>
+                      <p class="text-dark">$5000</p>
+                      <a href="#" class="btn btn-outline-success pt-2" style="border-radius: 50px; ">Buy</a>
+                    </div>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                      <div class="card border-0 bg-light">
+                        <div class="card-body">
+                             <img src="https://relay-bl-in-records.sgp1.cdn.digitaloceanspaces.com/GameNation/EA_4051" class="img-fluid" style="height: 250px; width:250px ;" alt="...">
+                        </div>
+                        <h6>Sony Playstation 5 Official Dual Sense Controller Grey Camo</h6>
+                        <p class="text-dark">$6999</p>
+                        <a href="#" class="btn btn-outline-success pt-2" style="border-radius: 50px; ">Buy</a>
+                      </div>
+                      </div>
+                      <div class="col-lg-3 text-center">
+                        <div class="card border-0 bg-light">
+                          <div class="card-body">
+                               <img src="https://sgp1.digitaloceanspaces.com/relay-bl-in-records/GameNation/EA_1596" class="img-fluid"style="height: 250px; width:250px ;" alt="...">
+                          </div>
+                          <h6>DualSense Edge Wireless Controller (Pre-owned)</h6>
+                          <p class="text-dark">$10000</p>
+                          <a href="#" class="btn btn-outline-success pt-2" style="border-radius: 50px; ">Buy</a>
+                        </div>
+                        </div>
+                        <div class="col-lg-3 text-center">
+                          <div class="card border-0 bg-light">
+                            <div class="card-body">
+                                 <img src="https://sgp1.digitaloceanspaces.com/relay-bl-in-records/GameNation/EA_939" class="img-fluid"style="height: 250px; width:250px ;" alt="...">
+                            </div>
+                            <h6>DualSense Edge Wireless Controller</h6>
+                            <p class="text-dark">$8000</p>
+                            <a href="#" class="btn btn-outline-success pt-2" style="border-radius: 50px; ">Buy</a>
+                          </div>
+                          </div>
+                          <br>
+
+                   <center>        <h1 class="py-2 my-5">console</h1></center>
+
+                          <div class="col-lg-3 text-center py-5">
+                            <div class="card border-0 bg-light">
+                              <div class="card-body" id="two">
+                                   <img src="https://relay-bl-in-records.sgp1.cdn.digitaloceanspaces.com/GameNation/EA_976" class="img-fluid" style="height: 250px; width:250px ;" alt="...">
+                              </div>
+                              <h6>Sony PlayStation 5 Standard Edition 825 GB (Pre-owned)</h6>
+                              <p class="text-dark">$50,000</p>
+                              <a href="#" class="btn btn-outline-success pt-2" style="border-radius: 50px; ">buy</a>
+                            </div>
+                            </div>
+                            <div class="col-lg-3 text-center py-5">
+                              <div class="card border-0 bg-light">
+                                <div class="card-body">
+                                     <img src="https://sgp1.digitaloceanspaces.com/relay-bl-in-records/GameNation/EA_4268" class="img-fluid" style="height: 250px; width:250px ;" alt="...">
+                                </div>
+                                <h6>Sony PlayStation 5 Slim Disc Edition 1TB</h6>
+                                <p class="text-dark">$69000</p>
+                                <a href="#" class="btn btn-outline-success pt-2" style="border-radius: 50px; ">Buy</a>
+                              </div>
+                              </div>
+                              <div class="col-lg-3 text-center  py-5">
+                                <div class="card border-0 bg-light">
+                                  <div class="card-body">
+                                       <img src="https://sgp1.digitaloceanspaces.com/relay-bl-in-records/GameNation/EA_990" class="img-fluid" style="height: 250px; width:250px ;" alt="...">
+                                  </div>
+                                  <h6>Sony PlayStation 5 Slim Disc Edition </h6>
+                                  <p class="text-dark">$30000</p>
+                                  <a href="#" class="btn btn-outline-success pt-2" style="border-radius: 50px; ">Buy</a>
+                                </div>
+                                </div>
+                                <div class="col-lg-3 text-center  py-5">
+                                  <div class="card border-0 bg-light">
+                                    <div class="card-body">
+                                         <img src="https://relay-bl-in-records.sgp1.cdn.digitaloceanspaces.com/GameNation/EA_986" class="img-fluid" style="height: 250px; width:250px ;" alt="...">
+                                    </div>
+                                    <h6>Sony PlayStation 4 Pro 1 TB Star Wars Battlefront II Limited Edition</h6>
+                                    <p class="text-dark">$30,000</p>
+                                    <a href="#" class="btn btn-outline-success pt-2" style="border-radius: 50px; ">Buy</a>
+                                  </div>
+                                  </div>
+                  </div>
+              </div>
+    
+</div>
+     
+                                        <!--card finished-->
+
+   
+            <div class="contact" id="contactus">
+                <h1>Contact US</h1>
+                <p class="text-dark"> <a href="">www.mohamedasvath@gmail.com</a></p>
+                <p>ph No:1234567891</p>
+            </div>
+                 
+                                 <!--form-->
+                            
+ 
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
