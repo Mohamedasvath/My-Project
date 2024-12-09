@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Calculator</title>
+</head>
+<body>
+    <script>
+
+        var studentID= 10001;
+        var Studentname="UNKNOWN "
+        var m1=parseInt(prompt("enter Your Mark"));
+        var m2=parseInt(prompt("enter Your Mark"));
+        var m3=parseInt(prompt("enter Your Mark"));
+        var m4=parseInt(prompt("enter Your Mark"));
+        var m5=parseInt(prompt("enter Your Mark"));
+        var total=m1+m2+m3+m4+m5;
+        var percent=total/5;
+        
+        
+     
+       if(percent>90)
+       {
+        
+        document.write("Rank :A Grade");
+       }
+
+       else if(percent>80 && percent<=90)
+       
+           {
+            
+            document.write("Rank: B Grade");
+           }
+        
+           else if(percent>70 && percent<=80)
+
+           {   
+            document.write("Rank: C Grade");
+           }
+           else if(percent>=60 && percent<=70)
+
+           {           
+            document.write("Rank: D Grade");
+           }
+           else if(percent>50 && percent<=60)
+
+
+           {            
+            document.write("Rank: E Grade");
+           }
+           else
+           
+
+           {
+            document.write("Rank: No result");
+           }
+
+           
+
+        
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
