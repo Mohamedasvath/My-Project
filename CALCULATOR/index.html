@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+  
+     
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculator">
+            <input class="display" type="text" id="display">
+
+            <div class="buttons">
+            
+            <button data-value="AC" type="" id="" class="value">AC</button>
+            <button data-value="DEL" type="" id=""class="value">DEL</button>
+            <button data-value="%" type="" id=""class="value">%</button>
+            <button data-value="/" type="" id=""class="value">/</button>
+
+
+            <button data-value="7" type="" id="">7</button>
+            <button data-value="8" type="" id="">8</button>
+            <button data-value="9" type="" id="">9</button>
+            <button data-value="*" class="value" type="" id="">*</button>
+
+
+            <button data-value="4" type="" id="">4</button>
+            <button data-value="5" type="" id="">5</button>
+            <button data-value="6" type="" id="">6</button>
+            <button data-value="-"class="value" type="" id="">-</button>
+
+
+            <button data-value="1" type="" id="">1</button>
+            <button data-value="2" type="" id="">2</button>
+            <button data-value="3" type="" id="">3</button>
+            <button data-value="+"class="value" type="" id="">+</button>
+
+
+            <button data-value="0" type="" id="">0</button>
+            <button data-value="00" type="" id="">00</button>
+            <button data-value="." type="" id="">.</button>
+            <button data-value="="class="value" type="" id="">=</button>
+            
+
+           
+
+        </div>
+            
+
+
+
+        </div>
+
+
+    </div>
+    <script>
+        const display = document.querySelector(".display");
+ const buttons = document.querySelectorAll("button");
+ const specialChars = ["%", "*", "/", "-", "+", "="];
+ let output = "";
+ 
+ //Define function to calculate based on button clicked.
+ const calculate = (btnValue) => {
+   display.focus();
+   if (btnValue === "=" && output !== "") {
+     //If output has '%', replace with '/100' before evaluating.
+     output = eval(output.replace("%", "/100"));
+   } else if (btnValue === "AC") {
+     output = "";
+   } else if (btnValue === "DEL") {
+     //If DEL button is clicked, remove the last character from the output.
+     output = output.toString().slice(0, -1);
+   } else {
+     //If output is empty and button is specialChars then return
+     if (output === "" && specialChars.includes(btnValue)) return;
+     output += btnValue;
+   }
+   display.value = output;
+ };
+ 
+ //Add event listener to buttons, call calculate() on click.
+ buttons.forEach((button) => {
+   //Button click listener calls calculate() with dataset value as argument.
+   button.addEventListener("click", (e) => calculate(e.target.dataset.value));
+ });
+ 
+     </script>
+ 
+    
+</body>
+</html>
