@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM VALIDATION</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="validation.js"></script>
+    <link rel="success" href="index1.html">
+</head>
+<body>
+   <div class="main">
+   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbBqohxRwauBBPw4lCljQ_1VL3P9cldRphzA&s" alt="" srcset=""> 
+    <h2>LOGIN</h2> 
+  </div>
+<div class="name">
+  
+</div> 
+  
+    
+    <div class="container">
+       
+
+  
+
+   
+   <form action="index.html" onsubmit="return validate()" method="post">
+
+   <div>
+    <h1>Registration Form</h1>
+    <label for="name">Name</label><br>
+    <input type="text" name="name" id="name" value="" placeholder="enter your Username">
+    <span id="name-error" class="error-message" style="width: fit-content;"></span>
+   </div> 
+         
+   <div>
+    <label for="password">Password</label><br>
+    <input type="text" name="password" id="pwd" value="" placeholder="enter your Password">
+    <span id="pwd-error" class="error-message"></span>
+   </div> 
+
+   <div>
+    <label for="Address">Address:</label><br>
+    <input type="text" name="address" id="address" value="" placeholder="enter your address">
+    <span id="address-error" class="error-message"></span>
+   </div> 
+   <div>
+    <label for="email">Email:</label><br>
+    <input type="text" name="email" id="email" value="" placeholder="enter your email id">
+    <span id="email-error" class="error-message"></span>
+   </div> 
+
+   <div>
+    <label for="number">Contact Number:</label><br>
+    <input type="number" name="number" id="number" value="" placeholder="enter your Mobile number">
+    <span id="ph-error" class="error-message"></span>
+   </div> 
+   <div>
+
+    
+    <input class="buttonone" type="submit" value="Register"/>
+    <input class="buttontwo"  type="reset" value="cancel"/>
+   </div>
+ 
+</form>
+</div>
+
+ 
+
+</body>
+</html>
+            
+
