@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(5, 43, 73);
+}
+
+.header{
+    height: auto;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 10px;
+    background-color: rgb(97, 71, 71);
+    box-shadow: 5px 5px 5px 5px ;
+    
+
+}
+h1{
+    
+    border-radius: 20%;
+    text-decoration: underline;
+    font-size: x-large;
+    padding: 20px;
+    text-align: center;
+    color: limegreen;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #fff;
+}
+input{
+    width: 300px;
+    height: 35px;
+    border-radius: 10px;
+    text-align: center;
+    
+    font-size: larger;
+    position: 20px;
+    font-weight: 20px;
+    margin-left: 50px;
+    box-shadow: 2px 2px 2px #d310ac;
+    
+    
+}
+input:hover{
+    
+    
+    background-color: #000000;
+    color: white;
+}
+
+
+     
+.button {
+    --bg: #000;
+    --hover-bg: #ff90e8;
+    --hover-text: #000;
+    color: #f1f1f1;
+    cursor: pointer;
+    border: 1px solid var(--bg);
+    border-radius: 10px;
+    padding: 0.8em 2em;
+    background: var(--bg);
+    transition: 0.2s;
+    margin-left: 10px;
+    background-color: rgb(94, 85, 85);
+    border: rgb(17, 14, 14) 2px solid;
+    
+    
+  }
+  
+  .button:hover {
+    color: var(--hover-text);
+    transform: translate(-0.25rem, -0.25rem);
+    background: var(--hover-bg);
+    box-shadow: 0.25rem 0.25rem var(--bg);
+  }
+  
+  .button:active {
+    transform: translate(0);
+    box-shadow: none;
+  }
+  ul{
+    padding:20px;
+    list-style: none;
+    color: white;
+    margin-left: 10px;
+    align-content: end;
+
+  }
+  li{
+    background-color: rgb(0, 0, 0);
+    padding: 7px;
+    border-radius: 20px;
+    align-items: end;
+    
+    color: white;
+    font-weight: 400;
+    font-size: large;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(97, 0, 0);
+    
+}
+.buttonnew{
+   
+    margin-left: 300px; 
+   padding: 7px;
+   background-color: rgb(255, 255, 255);
+   color: rgb(0, 0, 0);
+   border-radius: 10px;
+    background-color: #ffffff00;
+  color: #fff;
+  
+  
+  border: #3654ff 0.2em solid;
+  
+  text-align: right;
+  transition: all 0.6s ease;
+   
+}
+.buttonnew:hover {
+    background-color: #f80000;
+    cursor: pointer;
+  }
+  
+  .buttonnew svg {
+    width: 1.6em;
+    margin: -0.2em 0.8em 1em;
+    position: absolute;
+    display: flex;
+    transition: all 0.6s ease;
+  }
+  
+  .buttonnew:hover svg {
+    transform: translateX(5px);
+  }
+  
+  .text {
+    margin: 0 1.5em
+  }
+
+  
+
+
+    
+    
+    
+
